@@ -7,7 +7,7 @@ int main() {
     scanf("%d", &num);
 
     if (num < 100 || num > 999) {
-        printf("Erro: número inválido!\n");
+        printf("Erro: número invalido!\n");
         return 0;
     }
 
@@ -15,7 +15,7 @@ int main() {
     dezena = (num / 10) % 10;
     unidade = num % 10;
 
-    printf("O número invertido é: %d%d%d\n", unidade, dezena, centena);
+    printf("O número invertido eh: %d%d%d\n", unidade, dezena, centena);
 
     return 0;
 }
