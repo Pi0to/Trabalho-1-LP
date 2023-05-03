@@ -1,22 +1,25 @@
 #include <stdio.h>
+#include <math.h>
 
-int main() 
+int main() {
     
-    int num, centena, dezena, unidade;
+    float lado_1, lado_2, lado_3;
+    float p, area;
 
-    printf("Digite um número inteiro de tres dígitos: ");
-        scanf("%d", &num);
+    printf("Digite os valores dos lados do triangulo: ");
+    scanf("%f %f %f", &lado_1, &lado_2, &lado_3);
 
-    if (num < 100 || num > 999) {
-        
-        printf("Erro: número invalido!\n");
+    // Verifica se os lados formam um triângulo válido
+    if (lado_1 + lado_2 <= lado_3 || lado_1 + lado_3 <= lado_2 || lado_2 + lado_3 <= lado_1) {
+        printf("Valores invalidos.\n");
+    } 
+    else {
+        // Calcula o perímetro e a área do triângulo
+        p = (lado_1 + lado_2 + lado_3) / 2;
+        area = sqrt(p * (p - lado_1) * (p - lado_2) * (p - lado_3));
+
+        printf("A area do triangulo eh: %.2f\n", area);
     }
-
-    centena = num / 100;
-    dezena = (num / 10) % 10;
-    unidade = num % 10;
-
-    printf ("O número invertido eh: %d%d%d\n", unidade, dezena, centena);
 
     return 0;
 }
