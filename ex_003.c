@@ -9,21 +9,21 @@ int main() {
        
     if (dia > 31 || dia < 1 || mes > 12 || ano < 1){
 
-        printf ("Data inválida!");
+        printf ("Data invalida!");
     }
     
     else if (dia == 31 && ( mes == 4 || mes == 6 || mes == 9 || mes == 11) ){
 
-        printf ("Data inválida!"); 
+        printf ("Data invalida!"); 
     }
     
     else if (dia == 29 &&  0 != ano%4){
      
-        printf ("Data inválida!");
+        printf ("Data invalida!");
     }    
     
     else {
-        printf ("Data válida!");
+        printf ("Data valida!");
     }
     return 0;
 }
